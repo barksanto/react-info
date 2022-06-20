@@ -4,14 +4,16 @@ import Main from "./components/Main"
 import styles from "../src/App.css"
 
 export default function App() {
-  function handleClick() {
-    console.log("clicked")
+  const [darkMode, setDarkMode] = React.useState(true)
+
+  function toggleDarkMode() {
+    setDarkMode((prevMode) => !prevMode)
   }
 
   return (
     <div className="container">
-      <Navbar handleClick={handleClick} />
-      <Main />
+      <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+      <Main darkMode={darkMode} />
     </div>
   )
 }
