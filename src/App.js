@@ -1,7 +1,12 @@
-import "./App.css"
+import React from "react"
+// import Navbar from "./components/Navbar"
+import Main from "./components/Main"
 
-function App() {
-  return <h1>Welcome to the App component</h1>
+export default function App() {
+  return (
+    <div className="container">
+      {/* <Navbar /> */}
+      <Main />
+    </div>
+  )
 }
-
-export default App
